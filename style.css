@@ -1,0 +1,144 @@
+/* --- GLOBAL VARIABLES & RESETS --- */
+:root {
+    --bg-sidebar: #f8f9fa;
+    --text-dark: #333;
+    --text-light: #666;
+    --border-color: #e0e0e0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Only specific areas scroll */
+    color: var(--text-dark);
+}
+
+/* --- SIDEBAR --- */
+#sidebar {
+    width: 300px;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    flex-shrink: 0;
+}
+
+.logo { margin-bottom: 25px; }
+.logo h2 { font-size: 1.2rem; color: #164da0; margin-bottom: 5px; }
+.logo p { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+
+/* Search Input */
+.search-container { margin-bottom: 20px; }
+#searchBar {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+#searchBar:focus { outline: none; border-color: #164da0; }
+
+/* Navigation List */
+#nav-list { list-style: none; overflow-y: auto; flex-grow: 1; }
+#nav-list li { margin-bottom: 5px; }
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-link:hover { background-color: #e9ecef; }
+.nav-link.active {
+    background-color: #e3effd;
+    color: #164da0;
+    border-left: 3px solid #164da0;
+    font-weight: 600;
+}
+
+/* --- MAIN CONTENT --- */
+main {
+    flex: 1;
+    padding: 40px 60px;
+    overflow-y: auto; /* Internal scrolling */
+    scroll-behavior: smooth;
+    background-color: #fff;
+}
+
+header { margin-bottom: 60px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+header h1 { font-size: 2rem; margin-bottom: 10px; }
+.term-date { color: var(--text-light); }
+
+/* --- SECTION STYLING --- */
+section { scroll-margin-top: 40px; margin-bottom: 80px; }
+
+.section-header { display: flex; align-items: center; margin-bottom: 25px; }
+.section-header h2 { font-size: 1.5rem; margin-right: 15px; white-space: nowrap; }
+.section-line { flex: 1; height: 1px; background: var(--border-color); }
+
+/* Logo Styling */
+.board-logo {
+    height: 45px;
+    width: auto;
+    margin-right: 15px;
+    object-fit: contain;
+}
+
+/* Card Grid */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+.card h3 { font-size: 1.1rem; margin-bottom: 5px; color: var(--text-dark); }
+.card .role { font-size: 0.85rem; color: var(--text-light); text-transform: uppercase; font-weight: 600; }
+
+/* --- CUSTOM THEMES --- */
+/* Add more colors here as needed */
+
+/* Blue Theme (AKEPB) */
+.theme-akepb h2 { color: #0056b3; }
+.theme-akepb .card { border-left: 4px solid #0056b3; }
+.theme-akepb .section-line { background: #0056b3; opacity: 0.3; }
+
+/* Purple Theme (Arts) */
+.theme-arts h2 { color: #6f42c1; }
+.theme-arts .card { border-left: 4px solid #6f42c1; }
+.theme-arts .section-line { background: #6f42c1; opacity: 0.3; }
+
+/* Green Theme (Property) */
+.theme-property h2 { color: #198754; }
+.theme-property .card { border-left: 4px solid #198754; }
+.theme-property .section-line { background: #198754; opacity: 0.3; }
+
+/* Red Theme (Legal) */
+.theme-legal h2 { color: #dc3545; }
+.theme-legal .card { border-left: 4px solid #dc3545; }
+.theme-legal .section-line { background: #dc3545; opacity: 0.3; }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body { flex-direction: column; overflow: auto; }
+    #sidebar { width: 100%; height: auto; border-bottom: 1px solid var(--border-color); }
+    main { padding: 20px; overflow: visible; }
+    #nav-list { display: flex; overflow-x: auto; padding-bottom: 10px; }
+    .nav-link { white-space: nowrap; margin-right: 10px; }
+}

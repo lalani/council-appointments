@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Council Appointments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="sidebar">
+        <div class="logo">
+            <h2>Ismaili Council</h2>
+            <p>Southeastern USA</p>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search name or board..." onkeyup="filterContent()">
+        </div>
+
+        <ul id="nav-list">
+            <li><a href="#akepb" class="nav-link active">Economic Planning (AKEPB)</a></li>
+            <li><a href="#arts" class="nav-link">Arts & Culture</a></li>
+            <li><a href="#property" class="nav-link">Property Portfolio</a></li>
+            <li><a href="#legal" class="nav-link">Legal Matters</a></li>
+            </ul>
+    </nav>
+
+    <main id="main-content">
+        <header>
+            <h1>Institutional Appointments</h1>
+            <p class="term-date">Term: July 11, 2024 - July 11, 2025</p>
+        </header>
+
+        <section id="akepb" class="department-section theme-akepb">
+            <div class="section-header">
+                <img src="images/akepb-logo.png" alt="AKEPB Logo" class="board-logo" onerror="this.style.display='none'"> 
+                <h2>Economic Planning Board</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="roster-grid">
+                <div class="card"><h3>Salim Amirali</h3><span class="role">Chairperson</span></div>
+                <div class="card"><h3>Jibran Lakhani</h3><span class="role">Honorary Secretary</span></div>
+                <div class="card"><h3>Adnan Charania</h3><span class="role">Board Member</span></div>
+                <div class="card"><h3>Danish Virani</h3><span class="role">Board Member</span></div>
+            </div>
+        </section>
+
+        <section id="arts" class="department-section theme-arts">
+            <div class="section-header">
+                <img src="images/arts-logo.png" alt="Arts Logo" class="board-logo" onerror="this.style.display='none'">
+                <h2>Arts & Culture</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="roster-grid">
+                <div class="card"><h3>Alisha Merchant</h3><span class="role">Portfolio Lead</span></div>
+                <div class="card"><h3>Rahim Ali</h3><span class="role">Member</span></div>
+                <div class="card"><h3>Sarah Momin</h3><span class="role">Member</span></div>
+            </div>
+        </section>
+
+        <section id="property" class="department-section theme-property">
+            <div class="section-header">
+                <img src="images/property-logo.png" alt="Property Logo" class="board-logo" onerror="this.style.display='none'">
+                <h2>Property Matters Portfolio</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="roster-grid">
+                <div class="card"><h3>Muizz Sohani</h3><span class="role">Council Member</span></div>
+                <div class="card"><h3>Suleman Sohani</h3><span class="role">Deputy Lead</span></div>
+                <div class="card"><h3>Akbar Rahim</h3><span class="role">Core Team</span></div>
+            </div>
+        </section>
+
+        <section id="legal" class="department-section theme-legal">
+            <div class="section-header">
+                <img src="images/legal-logo.png" alt="Legal Logo" class="board-logo" onerror="this.style.display='none'">
+                <h2>Legal Matters Portfolio</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="roster-grid">
+                <div class="card"><h3>Zain Kapadia</h3><span class="role">Council Member</span></div>
+                <div class="card"><h3>Ameesh Kherani</h3><span class="role">Core Team</span></div>
+            </div>
+        </section>
+
+        <div style="height: 300px;"></div> 
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
